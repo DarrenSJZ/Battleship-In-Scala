@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dsjz.battleship.controller.PlayerStatsController">
+    <children>
+        <GridPane layoutX="293.0" layoutY="205.0" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="709.0" minWidth="10.0" prefWidth="300.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="600.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="272.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <TableView fx:id="playerTable" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                        <TableColumn fx:id="nameColumn" prefWidth="340.0" text="Usernames" />
+                    </columns>
+                </TableView>
+            <GridPane fx:id="player1DetailsGrid" prefHeight="720.0" prefWidth="636.0" GridPane.columnIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="162.0" minHeight="9.0" prefHeight="51.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="436.0" minHeight="10.0" prefHeight="436.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="Player 1 Details" translateX="10.0" underline="true" />
+                  <Label text="Player 2 Details" translateX="10.0" underline="true" GridPane.columnIndex="1" />
+                  <GridPane fx:id="player1StatsGrid" GridPane.rowIndex="1">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="SHOTS FIRED: " translateX="10.0" />
+                        <Label fx:id="shotsFiredLabel1" GridPane.columnIndex="1" />
+                        <Label text="SHOTS HIT:" translateX="10.0" GridPane.rowIndex="1" />
+                        <Label fx:id="shotsHitLabel1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="SHOTS MISSED:" translateX="10.0" GridPane.rowIndex="2" />
+                        <Label fx:id="shotsMissedLabel1" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="ULTIMATES USED:" translateX="10.0" GridPane.rowIndex="3" />
+                        <Label fx:id="ultimateUsedLabel1" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="ROUNDS SURVIVED:" translateX="10.0" GridPane.rowIndex="4" />
+                        <Label fx:id="roundsSurvivedLabel1" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label text="ENEMY SHIPS SUNK:" translateX="10.0" GridPane.rowIndex="5" />
+                        <Label fx:id="enemyShipsSunkLabel1" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                     </children>
+                  </GridPane>
+                  <GridPane fx:id="player2StatsGrid" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="SHOTS FIRED:" translateX="10.0" />
+                        <Label fx:id="shotsFiredLabel2" GridPane.columnIndex="1" />
+                        <Label text="SHOTS HIT:" translateX="10.0" GridPane.rowIndex="1" />
+                        <Label fx:id="shotsHitLabel2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="SHOTS MISSED:" translateX="10.0" GridPane.rowIndex="2" />
+                        <Label fx:id="shotsMissedLabel2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="ULTIMATES USED:" translateX="10.0" GridPane.rowIndex="3" />
+                        <Label fx:id="ultimateUsedLabel2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="ROUNDS SURVIVED:" translateX="10.0" GridPane.rowIndex="4" />
+                        <Label fx:id="roundsSurvivedLabel2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label text="ENEMY SHIPS SUNK:" translateX="10.0" GridPane.rowIndex="5" />
+                        <Label fx:id="enemyShipsSunkLabel2" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backButtonHandler" prefHeight="50.0" prefWidth="200.0" text="Back" translateX="-20.0" translateY="-20.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM" />
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="695.0" prefWidth="1280.0" stylesheets="@GridMap.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dsjz.battleship.controller.ShipPlacementP1Controller">
+   <children>
+      <SplitPane dividerPositions="0.4569640062597809" layoutX="353.0" layoutY="208.0" prefHeight="695.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <GridPane prefHeight="693.0" prefWidth="581.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="290.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="290.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="695.0" prefHeight="695.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <GridPane GridPane.columnIndex="1">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="15.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.0" minWidth="10.0" prefWidth="251.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="15.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="77.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="628.0" minHeight="10.0" prefHeight="429.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="184.0" minHeight="-Infinity" prefHeight="184.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label prefHeight="16.0" prefWidth="187.0" text="Place Your Fleet" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                 <font>
+                                    <Font name="Arial Bold Italic" size="24.0" />
+                                 </font>
+                              </Label>
+                               <VBox prefHeight="500.0" prefWidth="250.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                   <children>
+                                       <Button fx:id="P1carrierButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onAction="#P1carrierButtonHandler" prefHeight="50" prefWidth="250.0">
+                                           <graphic>
+                                               <ImageView fitHeight="40.0" fitWidth="240.0" preserveRatio="true">
+                                                   <image>
+                                                       <Image url="@/images/game/Carrier_horizontal.png" />
+                                                   </image>
+                                               </ImageView>
+                                           </graphic>
+                                       </Button>
+                                       <Button fx:id="P1battleshipButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onAction="#P1battleshipButtonHandler" prefHeight="50.0" prefWidth="250.0">
+                                           <graphic>
+                                               <ImageView fitHeight="40.0" fitWidth="240.0" preserveRatio="true">
+                                                   <image>
+                                                       <Image url="@/images/game/Battleship_horizontal.png" />
+                                                   </image>
+                                               </ImageView>
+                                           </graphic>
+                                       </Button>
+                                       <Button fx:id="P1cruiserButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onAction="#P1cruiserButtonHandler" prefHeight="50" prefWidth="250.0">
+                                           <graphic>
+                                               <ImageView fitHeight="40.0" fitWidth="240.0" preserveRatio="true">
+                                                   <image>
+                                                       <Image url="@/images/game/Cruiser_horizontal.png" />
+                                                   </image>
+                                               </ImageView>
+                                           </graphic>
+                                       </Button>
+                                       <Button fx:id="P1submarineButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onAction="#P1submarineButtonHandler" prefHeight="50" prefWidth="250.0">
+                                           <graphic>
+                                               <ImageView fitHeight="40.0" fitWidth="240.0" preserveRatio="true">
+                                                   <image>
+                                                       <Image url="@/images/game/Submarine_horizontal.png" />
+                                                   </image>
+                                               </ImageView>
+                                           </graphic>
+                                       </Button>
+                                       <Button fx:id="P1destroyerButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onAction="#P1destroyerButtonHandler" prefHeight="50" prefWidth="250.0">
+                                           <graphic>
+                                               <ImageView fitHeight="40.0" fitWidth="240.0" preserveRatio="true">
+                                                   <image>
+                                                       <Image url="@/images/game/Destroyer_horizontal.png" />
+                                                   </image>
+                                               </ImageView>
+                                           </graphic>
+                                       </Button>
+
+                                   </children>
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <padding>
+                                    <Insets top="50.0" />
+                                 </padding>
+                              </VBox>
+                              <Button fx:id="P1endButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#P1EndButtonHandler" prefHeight="35.0" prefWidth="200.0" text="END TURN" translateY="-10.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                           </children>
+                        </GridPane>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="280.0" fitWidth="280.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../images/game/GameChara1.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label text="Player 1: Admiral Vladizlena">
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Arial Italic" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextArea editable="false" prefHeight="282.0" prefWidth="295.0" text="Admiral Vladizlena, born in the coastal city of Selvania, was destined for the sea. Orphaned at a young age, she was raised by a fleet captain who saw her potential and taught her the art of naval warfare. By 16, she was commanding her own ship, earning a reputation for her tactical brilliance and unwavering resolve. Vladizlena's rise through the ranks was swift, marked by numerous victories against pirates and enemy fleets. Her fearless leadership and strategic mind made her a legend, respected by allies and feared by foes. Now, as admiral, she commands the Selvanian navy, protecting her homeland with unmatched prowess." wrapText="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Arial Bold Italic" size="12.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </VBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <GridPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="695.0" prefWidth="695.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="635.0" prefWidth="635.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="635.0" prefHeight="635.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <GridPane GridPane.columnIndex="1">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label text="3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label text="4" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label text="5" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label text="6" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label text="7" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label text="8" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label text="9" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label text="10" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                        <GridPane GridPane.rowIndex="1">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="A" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label text="B" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label text="C" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label text="D" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label text="E" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label text="F" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label text="G" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label text="H" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label text="I" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label text="J" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                         <GridPane fx:id="gameGridP1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="635.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                             <columnConstraints>
+                                 <ColumnConstraints prefWidth="64" />
+                                 <ColumnConstraints prefWidth="64" />
+                                 <ColumnConstraints prefWidth="64" />
+                                 <ColumnConstraints prefWidth="64" />
+                                 <ColumnConstraints prefWidth="64" />
+                                 <ColumnConstraints prefWidth="64" />
+                                 <ColumnConstraints prefWidth="64" />
+                                 <ColumnConstraints prefWidth="64" />
+                                 <ColumnConstraints prefWidth="64" />
+                                 <ColumnConstraints prefWidth="64" />
+                             </columnConstraints>
+                             <rowConstraints>
+                                 <RowConstraints prefHeight="64" />
+                                 <RowConstraints prefHeight="64" />
+                                 <RowConstraints prefHeight="64" />
+                                 <RowConstraints prefHeight="64" />
+                                 <RowConstraints prefHeight="64" />
+                                 <RowConstraints prefHeight="64" />
+                                 <RowConstraints prefHeight="64" />
+                                 <RowConstraints prefHeight="64" />
+                                 <RowConstraints prefHeight="64" />
+                                 <RowConstraints prefHeight="64" />
+                             </rowConstraints>
+                             <children>
+                                 <!-- Row 0 -->
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                 <!-- Row 1 -->
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                 <!-- Row 2 -->
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                 <!-- Row 3 -->
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                 <!-- Row 4 -->
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                 <!-- Row 5 -->
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                                 <!-- Row 6 -->
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                                 <!-- Row 7 -->
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+                                 <!-- Row 8 -->
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                                 <!-- Row 9 -->
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+                                 <Button prefHeight="64" prefWidth="64" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+                             </children>
+                         </GridPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

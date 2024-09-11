@@ -1,0 +1,21 @@
+/* Style for the buttons */
+.button {
+    -fx-background-color: #1E90FF; /* DodgerBlue color */
+    -fx-text-fill: white; /* White text color */
+    -fx-font-size: 36px; /* Font size */
+    -fx-font-family: "Arial Bold Italic"; /* Font family */
+    -fx-padding: 10 20 10 20; /* Padding inside the button */
+    -fx-background-radius: 30; /* Rounded corners */
+    -fx-border-radius: 30; /* Rounded border corners */
+    -fx-cursor: hand; /* Change cursor to hand on hover */
+}
+
+/* Hover effect for the buttons */
+.button:hover {
+    -fx-background-color: #1C86EE; /* Slightly darker blue on hover */
+}
+
+/* Pressed effect for the buttons */
+.button:pressed {
+    -fx-background-color: #1874CD; /* Even darker blue when pressed */
+}

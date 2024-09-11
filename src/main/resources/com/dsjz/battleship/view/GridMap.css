@@ -1,0 +1,12 @@
+
+.grid-button {
+    -fx-background-color: #F8F8F8;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+    -fx-border-radius: 0px;
+    -fx-background-radius: 0px;
+}
+
+.grid-button:hover {
+    -fx-background-color: #c0c0c0;
+}
