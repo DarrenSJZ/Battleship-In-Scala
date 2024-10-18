@@ -65,7 +65,7 @@ This is a ScalaFX implementation of the classic Battleship game, where two playe
 
 ## Screenshots
 
-_Include some relevant screenshots of your game interface, ship placement, and attack phases._
+_To Be Included_
 
 ## Contributors
 - **Siew Jun Zhen** – [GitHub](https://github.com/yourusername)
