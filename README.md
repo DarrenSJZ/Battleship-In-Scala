@@ -35,7 +35,7 @@ This is a ScalaFX implementation of the classic Battleship game, where two playe
    - Java 8 is required as this project uses JavaFX.
 
 4. **Run the project**:
-   sbt run
+   `sbt run`
 
 5. **Database Setup**:
    - This game uses ScalikeJDBC for player statistics.
